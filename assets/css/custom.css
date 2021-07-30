@@ -1,0 +1,39 @@
+#text-placeholder {
+	perspective: 25px;;
+}
+#inner {
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+  position: relative;
+}
+
+#inner:after {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border: solid 11px #000;
+    left: -50px;
+    content: "";
+    top: -110%;
+    z-index: -2;
+}
+
+#inner:before {
+    position: absolute;
+    width: 20px;
+    height: 216px;
+    border-right: solid 11px #fff;
+    right: 123px;
+    content: "";
+    top: -69%;
+    z-index: -1;
+}
+
+@media (max-width: 767.98px) {
+
+	#inner:after, #inner:before{
+		display: none;
+	}
+ }
